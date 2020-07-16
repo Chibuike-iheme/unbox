@@ -1,0 +1,94 @@
+body{
+  font-family: 'Poppins', sans-serif
+}
+.cat{
+font-weight: 600;
+font-size: 18px;
+color: #BB1928;
+}
+.navv{
+height: 74px;
+background: #F7EDED;
+}
+.search{
+width: 514px;
+background: #C4C4C4;
+border-radius: 5px;
+}
+.bn{
+padding: 10px;
+width: 86px;
+height: 47px;
+background: #BB1928;
+border-radius: 5px;
+}
+.jum{
+  background-image:url("./Assets/illustration.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.new{
+  font-size: 100px;
+  font-weight: 600;
+  color: #BB1928;
+}
+.p2{
+font-weight: 600;
+font-size: 24px;
+color: #BB1928;
+}
+.p22{
+  font-weight: 600;
+font-size: 24px;
+color: #0C0B0B;
+}
+
+
+.bnt{
+width: 283px;
+height: 88px;
+font-weight: bold;
+font-size: 24px;
+}
+.caption{
+font-weight: 600;
+font-size: 25px;
+
+color: #BB1928;
+}
+.seeAll{
+font-weight: 500;
+font-size: 20px;
+line-height: 36px;
+color: #BB1928;
+}
+footer{
+height: 470px;
+background: #FDF5F5;
+}
+.ft{
+font-weight: 500;
+font-size: 18px;
+color: #BB1928;
+}
+a {
+  color: #BB1928;
+}
+a:hover {
+  color: #BB1928;
+  text-decoration: none;
+}
+.cpy{
+font-size: 14px;
+color: #000000;
+}
+.icon{
+  font-size:25px;
+  color: #BB1928;
+}
+.choc{
+font-size: 100px;
+font-weight: 600;
+text-transform: uppercase;
+color: #0C0B0B;
+}
