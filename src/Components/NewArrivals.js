@@ -1,27 +1,35 @@
 import React from "react"
 import Navvbar from './Navvbar'
-import Section1 from './Section1'
-import Subnav from './Subnav'
-import Gallery1 from './Gallery1'
-import Gallery2 from './Gallery2'
-import Gallery3 from './Gallery3'
+import Gallery4 from './Gallery4'
 import Footer from './Footer'
+import Pagination from './Pagination'
 
 
-function NewArrivals () {
+function NewArrivals() {
     return (
         <>
-           <Navvbar />
-           <Section1 />
-            <div className="mb-5">
-                <Subnav caption="Best Sellers" />
-                <Gallery1 />
-                <Subnav caption="For Him" />
-                <Gallery2 />
-                <Subnav caption="For Her" />
-                <Gallery3 />
+            <Navvbar />
+            <section >
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <p class=" text-center text-white" style={{ fontSize: "48px", fontWeight: "600" }}>
+                    &nbsp;&nbsp;NEW IN
+                </p>
+                <br /><br /><br />
+                <div class=" ">
+                    <div class="container mx-5 p-3  text-center"
+                        style={{
+                            fontWeight: "600", fontSize: "18px", width: "257px", backgroundColor: "#F7EDED",
+                            color: "#BB1928", borderRadius: "3px"
+                        }}>
+                        HOME / NEW IN
+                    </div>
+                </div>
+            </section>
+            <div>
+                <Gallery4 />
             </div>
-           <Footer />
+            <Pagination />
+            <Footer />
         </>
     )
 }

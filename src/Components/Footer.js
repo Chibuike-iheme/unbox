@@ -1,5 +1,5 @@
 import React from "react"
-import Unbox from './../Assets/unbox.svg';
+import Unbox from '../Assets/unbox.svg';
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
@@ -31,7 +31,7 @@ function Footer() {
                         </p>
                     </div>
                     <div className="col ft mt-5 pt-5">
-                        <a className="font-weight-bold" href="#">
+                        <a className="font-weight-bold a" href="#">
                             CONTACT US
                         </a>
                         <p>
@@ -40,7 +40,7 @@ function Footer() {
                         </p>
                     </div>
                     <div className="col ft mt-5 pt-5">
-                        <a className="font-weight-bold" href="#">
+                        <a className="font-weight-bold a" href="#">
                             ORDER STATUS
                         </a>
                         <p>
@@ -49,7 +49,7 @@ function Footer() {
                         </p>
                     </div>
                     <div className="col ft mt-5 pt-5">
-                        <a className="font-weight-bold" href="#">
+                        <a className="font-weight-bold a" href="#">
                             HELP
                         </a>
                         <p>

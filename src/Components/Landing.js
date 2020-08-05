@@ -6,14 +6,15 @@ import Gallery1 from './Gallery1'
 import Gallery2 from './Gallery2'
 import Gallery3 from './Gallery3'
 import Footer from './Footer'
+import Pagination from './Pagination'
 
 
-function Landing () {
+function Landing() {
     return (
         <>
-           <Navvbar />
-           <Section1 />
-            <div className="mb-5">
+            <Navvbar />
+            <Section1 />
+            <div className=" container">
                 <Subnav caption="Best Sellers" />
                 <Gallery1 />
                 <Subnav caption="For Him" />
@@ -21,7 +22,8 @@ function Landing () {
                 <Subnav caption="For Her" />
                 <Gallery3 />
             </div>
-           <Footer />
+            <Pagination />
+            <Footer />
         </>
     )
 }

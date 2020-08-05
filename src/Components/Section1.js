@@ -1,82 +1,35 @@
-import React, { useState } from 'react';
-import One from './../Assets/1.svg';
-import Two from './../Assets/2.svg';
-import {
-  Carousel,
-  CarouselItem,
-  CarouselControl,
-  CarouselIndicators,
-  CarouselCaption
-} from 'reactstrap';
-
-const items = [
-  {
-    src: One,
-    altText: 'Slide 1',
-    caption: <div><p className="new"> NEW ARRIVALS</p>
-    <p className="p2"> Discover new ways to suprise your loved ones</p>
-    <button className="btn btn-danger mr-5 bnt text-white my-2 my-sm-0" type="submit">GIFT NOW</button>
-      </div>
-  },
-  {
-    src: Two,
-    altText: 'Slide 2',
-    caption: <div><p className="choc "> CHOCHOLATE'</p>
-    <p className="p22 "> Discover new ways to suprise your loved ones</p>
-    <button className="btn btn-danger mr-5 bnt  text-white my-2 my-sm-0" type="submit">GIFT NOW</button></div>
-  }
-];
+import React from 'react';
+import One from './../Assets/1.png';
+// import Two from './../Assets/2.svg';
 
 
-function Landing (props) {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [animating, setAnimating] = useState(false);
 
-  const next = () => {
-    if (animating) return;
-    const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
-    setActiveIndex(nextIndex);
-  }
-
-  const previous = () => {
-    if (animating) return;
-    const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
-    setActiveIndex(nextIndex);
-  }
-
-  const goToIndex = (newIndex) => {
-    if (animating) return;
-    setActiveIndex(newIndex);
-  }
-
-  const slides = items.map((item) => {
-    return (
-      <CarouselItem
-        onExiting={() => setAnimating(true)}
-        onExited={() => setAnimating(false)}
-        key={item.src}
-      >
-        <img src={item.src} alt={item.altText} />
-        <CarouselCaption captionText={item.altText} captionHeader={item.caption} />
-      </CarouselItem>
-    );
-  });
-
+function Section() {
   return (
-    <Carousel
-      activeIndex={activeIndex}
-      next={next}
-      previous={previous}
-    >
-      <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
-      {slides}
-      <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-      <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-    </Carousel>
-  );
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src={One} class="img-fluid d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block text-left">
+            <p class="new"> NEW ARRIVALS</p>
+            <p class="p2"> Discover new ways to suprise your loved ones</p>
+            <button class="btn bnt btn-danger text-white my-2 my-sm-0" type="submit">GIFT NOW</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://res.cloudinary.com/dpakfqwzp/image/upload/q_auto:low/v1595176414/unbox/2_ftsrif.svg" class="img-fluid d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block text-left">
+            <p class="choc "> CHOCHOLATE'</p>
+            <p class="p22 "> Discover new ways to suprise your loved ones</p>
+            <button class="btn bnt btn-danger  text-white my-2 my-sm-0" type="submit">GIFT NOW</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
 
-      
 
 
-export default Landing
+
+export default Section

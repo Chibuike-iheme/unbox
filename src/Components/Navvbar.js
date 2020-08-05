@@ -1,76 +1,75 @@
-import React, { useState } from 'react';
-import {
-  InputGroup, Input,
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
-} from 'reactstrap';
-import Unbox from './../Assets/unbox.svg';
+import React from 'react';
+import Unbox from '../Assets/unbox.svg';
+import { FiMenu }  from "react-icons/fi";
+import { FiSearch }  from "react-icons/fi";
+
 
 function Navvbar() {
-  
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
-
   return (
-    <>
 
-<div>
-      <Navbar className="navv cat"  expand="md">
-        <NavbarBrand href="/">
-        <img className='ml-5' src={Unbox} width="50" height="67.29" alt="logoimage" loading="lazy" />
-        </NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mx-auto" navbar>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
+    <div>
+      <nav class="navbar navbar-expand-lg sticky-top bg-custom-1">
+        <a class="navbar-brand font-weight-bold" href="/">
+          <img src={Unbox} width="50" height="50" class="d-inline-block align-top" alt="" loading="lazy" />
+        </a>
+        <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <FiMenu style={{ color: "#BB1928", width: "30px", height:"30px" }}/>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav m-auto mt-2 mt-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 CATEGORY
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem className="cat">
-                  New Arivals
-                </DropdownItem>
-                <DropdownItem className="cat">
-                  Best Sellers
-                </DropdownItem>
-                <DropdownItem className="cat">
-                  Tech & Gadgets
-                </DropdownItem>
-                <DropdownItem className="cat">
-                  For Him
-                </DropdownItem>
-                <DropdownItem className="cat">
-                  For Her
-                </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
-              <NavItem className="ml-5">
-                <InputGroup>
-                  <Input className="form-control search mr-sm-2" type="search" placeholder="Search Unbox" aria-label="Search" />
-                </InputGroup>
-            </NavItem>
-            <NavItem className="ml-5">
-              <NavLink href="https://github.com/reactstrap/reactstrap">HELP</NavLink>
-            </NavItem>
-          </Nav>
-          <NavbarText>
-            <button className="btn btn-danger mr-5 bn text-white my-2 my-sm-0" type="submit">SIGN IN</button>
-          </NavbarText>
-        </Collapse>
-      </Navbar>
+               </a>
+              <div class="dropdown-menu " style={{ fontSize:"12px", backgroundColor: "#F7EDED", color: "#BB1928", width: "340px" }} aria-labelledby="navbarDropdown">
+                <table class="table table-borderless">
+                  <tbody class="">
+                    <tr>
+                      <td><a class="a" href="/NewArrivals">NEW IN</a></td>
+                      <td><a class="a" href="#">BLOG</a></td>
+                      <td><a class="a" href="#">BLOG</a></td>
+                    </tr>
+                    <tr>
+                      <td><a class="a" href="#">BEST SELLER</a></td>
+                      <td><a class="a" href="#">BEST SELLER</a></td>
+                      <td><a class="a" href="#">BEST SELLER</a></td>
+                    </tr>
+                    <tr>
+                      <td><a class="a" href="#">FOR HIM</a></td>
+                      <td><a class="a" href="#">FOR HIM</a></td>
+                      <td><a class="a" href="#">FOR HIM</a></td>
+                    </tr>
+                    <tr>
+                      <td><a class="a" href="#">FOR HER</a></td>
+                      <td><a class="a" href="#">FOR HER</a></td>
+                      <td><a class="a" href="#">FOR HER</a></td>
+                    </tr>
+                    <tr>
+                      <td><a class="a" href="#">PRICING</a></td>
+                      <td><a class="a" href="#">PRICING</a></td>
+                      <td><a class="a" href="#">PRICING</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control search mr-sm-2 text-danger" type="search" placeholder="Search Unbox" aria-label="Search" />
+            <button class="btn btn-outline-danger" type="submit">
+              <FiSearch />
+            </button>
+          </form>
+          <ul class="navbar-nav m-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">HELP<span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+          <button type="button" class="btn btn-danger">SIGN UP</button>
+        </div>
+      </nav>
     </div>
-    </>
+
   )
 }
 

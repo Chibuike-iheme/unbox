@@ -1,22 +1,21 @@
 import React from "react"
 import Card from './Card'
-import Fm1 from './../Assets/fm1.svg';
-import Fm2 from './../Assets/fm2.svg';
-import Fm3 from './../Assets/fm3.svg';
-import Fm4 from './../Assets/fm4.svg';
-
+// import Fh1 from './../Assets/fh1.png';
+// import Fh2 from './../Assets/fh2.png';
+// import Fh3 from './../Assets/fh3.png';
+// import Fh4 from './../Assets/fh4.png';
 
 function Gallery3(props) {
   return (
     <div>
-    <Card
-      image1={Fm1}
-      image2={Fm2}
-      image3={Fm3}
-      image4={Fm4}
-    />
+      <Card
+        image1="https://res.cloudinary.com/dpakfqwzp/image/upload/q_auto/v1595272138/unbox/fh1_h7glzd.png"
+        image2="https://res.cloudinary.com/dpakfqwzp/image/upload/q_auto/v1595272139/unbox/fh2_gmkhkm.png"
+        image3="https://res.cloudinary.com/dpakfqwzp/image/upload/q_auto/v1595272136/unbox/fh3_q1m3gi.png"
+        image4="https://res.cloudinary.com/dpakfqwzp/image/upload/q_auto/v1595272137/unbox/fh4_flpyq7.png"
+      />
     </div>
-    )
+  )
 }
 
 
